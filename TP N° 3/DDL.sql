@@ -14,7 +14,7 @@ create table Epocas (
 create table Generos (
     Nombre varchar(100) not null,
     Caracteristicas varchar(400),
-    Musicos varchar(100) not null,
+    Musicos varchar(100),
     Instrumentos varchar(100) not null,
     Origenes varchar(300),
     Epoca varchar(100) not null,
@@ -26,7 +26,7 @@ create table Musicos (
     Nombre varchar(100) not null,
     Nacimiento date not null,
     Muerte date not null,
-    Historia varchar(400) not null,
+    Historia varchar(400),
     Genero varchar(100) not null,
     Primary key(Nombre),
     Foreign key(Genero) references Generos(Nombre) 
@@ -35,8 +35,8 @@ create table Musicos (
 create table ObrasFamosas (
     Nombre varchar(100) not null,
     Creacion date not null,
-    Autores varchar(200) not null,
-    Partitura varchar(300) not null,
+    Autores varchar(200),
+    Partitura varchar(300),
     Genero varchar(100) not null,
     Primary key(Nombre),
     Foreign key(Genero) references Generos(Nombre) 
