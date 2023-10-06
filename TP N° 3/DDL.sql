@@ -14,8 +14,6 @@ create table Epocas (
 create table Generos (
     Nombre varchar(100) not null,
     Caracteristicas varchar(400),
-    Musicos varchar(100),
-    Instrumentos varchar(100) not null,
     Origenes varchar(300),
     Epoca varchar(100) not null,
     Primary Key(Nombre),
@@ -55,6 +53,7 @@ create table Instrumentos (
 create table Generos_Instrumentos (
     Nombre_Generos varchar(100) not null,
     Nombre_Instrumentos varchar(100) not null,
+    Primary key(Nombre_Generos, Nombre_Instrumentos),
     Foreign key(Nombre_Generos) references Generos(Nombre),
     Foreign key(Nombre_Instrumentos) references Instrumentos(Nombre) 
 );
@@ -62,6 +61,7 @@ create table Generos_Instrumentos (
 create table ObrasFamosas_Musicos (
     Nombre_ObrasFamosas varchar(100) not null,
     Nombre_Musicos varchar(100) not null,
+    Primary key(Nombre_ObrasFamosas, Nombre_Musicos),
     Foreign key(Nombre_ObrasFamosas) references ObrasFamosas(Nombre),
     Foreign key(Nombre_Musicos) references Musicos(Nombre)
 );

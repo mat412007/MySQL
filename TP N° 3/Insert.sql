@@ -6,13 +6,13 @@ values('Renacimiento', '1400-01-01', '1600-01-01', 'Poesia'),
 ('Periodo moderno', '1890-01-01', '1960-01-01', 'Jazz'),
 ('Periodo contemporaneo', '1960-01-01', '2023-12-01', 'Rock & Roll');
 
-insert into Generos(Nombre, Instrumentos, Epoca)
-values('Poesia', 'Guitarra', 'Renacimiento'),
-('Escultura', 'Maza', 'Barroco'),
-('Clasica', 'Piano', 'Clasicismo'),
-('Teatro', 'Violin', 'Romanticismo'),
-('Jazz', 'Clarinete', 'Periodo moderno'),
-('Rock & Roll', 'Guitarra electrica', 'Periodo contemporaneo');
+insert into Generos(Nombre, Epoca)
+values('Poesia', 'Renacimiento'),
+('Escultura', 'Barroco'),
+('Clasica', 'Clasicismo'),
+('Teatro', 'Romanticismo'),
+('Jazz', 'Periodo moderno'),
+('Rock & Roll', 'Periodo contemporaneo');
 
 insert into Musicos(Nombre, Nacimiento, Muerte, Genero)
 values('Francisco Guerrero', '1528-10-04', '1599-11-08', 'Poesia'),
