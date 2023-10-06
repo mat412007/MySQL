@@ -37,3 +37,19 @@ values('Guitarra', 'Espana', 'Cuerda'),
 ('Violin', 'Italia ', 'Cuerda'),
 ('Clarinete', 'Alemania', 'Viento'),
 ('Guitarra electrica', 'Estados Unidos', 'Cuerda');
+
+insert into Generos_Instrumentos(Nombre_Generos, Nombre_Instrumentos)
+values('Poesia', 'Guitarra'),
+('Escultura', 'Maza'),
+('Clasica', 'Piano'),
+('Teatro', 'Violin'),
+('Jazz', 'Clarinete'),
+('Rock & Roll', 'Guitarra electrica');
+
+insert into ObrasFamosas_Musicos(Nombre_ObrasFamosas, Nombre_Musicos)
+values('Pido la Paz y la Palabra', 'Francisco Guerrero'),
+('Estatua de la Libertad', 'Henry Purcell'),
+('El lago de los cisnes', 'Luigi Cherubini'),
+('Romeo y Julieta', 'Richard Wagner'),
+('What a Wonderful World', 'Paul Hindemith'),
+('Ace of Spades', 'Peter Ablinger');
