@@ -12,7 +12,7 @@
 
 7- select nombre, nacimiento, historia from musicos order by year(nacimiento) asc;
 
-8- select group_concat(nombre) as "Instrumentos", count(*) as "Cantidad" from Instrumentos where materiales like "%Madera%"; 
+8- select group_concat(nombre) as "Instrumentos", group_concat(tipo) as "Tipo",count(*) as "Cantidad" from Instrumentos where materiales like "%Madera%"; 
 
 9- select epocas.nombre as "Epoca", group_concat(generos.nombre) as "Generos" from epocas inner join Generos on epocas.nombre = generos.epoca group by epocas.nombre; 
 
