@@ -46,9 +46,9 @@ create table Instrumentos (
     Nombre varchar(100) not null,
     Foto varchar(50),
     Lugar varchar(70) not null,
-    Creador varchar(50) not null,
+    Creador varchar(50),
     Tipo varchar(40) not null,
-    Materiales varchar(300) not null,
+    Materiales varchar(300),
     Primary key(Nombre)
 );
 

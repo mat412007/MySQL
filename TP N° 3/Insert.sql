@@ -7,12 +7,12 @@ values('Renacimiento', '1400-01-01', '1600-01-01', 'Poesia'),
 ('Periodo contemporaneo', '1960-01-01', '2023-12-01', 'Rock & Roll');
 
 insert into Generos(Nombre, Instrumentos, Epoca)
-values('Poesia', 'Voz', 'Renacimiento'),
-('Escultura', 'Maza y puntero', 'Barroco'),
-('Clasica', 'Piano, Violin, Trompeta, Trombon y Percusion', 'Clasicismo'),
-('Teatro', 'Voz', 'Romanticismo'),
-('Jazz', 'Piano, Guitarra clasica, Violin, Clarinete', 'Periodo moderno'),
-('Rock & Roll', 'Guitarra, guitarra electrica, percusion y teclado', 'Periodo contemporaneo');
+values('Poesia', 'Guitarra', 'Renacimiento'),
+('Escultura', 'Maza', 'Barroco'),
+('Clasica', 'Piano', 'Clasicismo'),
+('Teatro', 'Violin', 'Romanticismo'),
+('Jazz', 'Clarinete', 'Periodo moderno'),
+('Rock & Roll', 'Guitarra electrica', 'Periodo contemporaneo');
 
 insert into Musicos(Nombre, Nacimiento, Muerte, Genero)
 values('Francisco Guerrero', '1528-10-04', '1599-11-08', 'Poesia'),
@@ -29,3 +29,11 @@ values('Pido la Paz y la Palabra', '1955-01-01', 'Poesia'),
 ('Romeo y Julieta', '1597-01-01', 'Teatro'),
 ('What a Wonderful World', '1967-01-01', 'Jazz'),
 ('Ace of Spades', '1980-01-01', 'Rock & Roll');
+
+insert into Instrumentos(Nombre, Lugar, Tipo)
+values('Guitarra', 'Espana', 'Cuerda'),
+('Maza', 'Desconocido', 'Percusion'),
+('Piano', 'Italia', 'Viento'),
+('Violin', 'Italia ', 'Cuerda'),
+('Clarinete', 'Alemania', 'Viento'),
+('Guitarra electrica', 'Estados Unidos', 'Cuerda');
