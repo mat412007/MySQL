@@ -1,4 +1,4 @@
-1- select generos.nombre as "Nombre del genero", generos.Caracteristicas as "Caracteristicas", generos.Origenes as "Origenes", generos.Epoca as "Epoca" from generos; /*Corregir*/
+1- select generos.nombre as "Nombre del genero", generos.Caracteristicas as "Caracteristicas", generos.Origenes as "Origenes", generos.Epoca as "Epoca", epocas.Comienzo as "Comienzo", musicos.nombre as "Musicos", musicos.nacimiento as "Nacimiento" from generos, epocas, musicos where generos.epoca = epocas.nombre and generos.nombre = musicos.genero; 
 
 2- select obrasfamosas_musicos.Nombre_Musicos as "Musicos", obrasfamosas.nombre as "Obra", obrasfamosas.creacion "Creacion", obrasfamosas.genero "Genero" from obrasfamosas_musicos inner join obrasfamosas on obrasfamosas.nombre = obrasfamosas_musicos.nombre_obrasfamosas; 
 
