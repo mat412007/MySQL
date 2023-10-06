@@ -17,18 +17,18 @@ values('Poesia', 'Renacimiento'),
 insert into Musicos(Nombre, Nacimiento, Muerte, Genero)
 values('Francisco Guerrero', '1528-10-04', '1599-11-08', 'Poesia'),
 ('Henry Purcell', '1659-09-10', '1695-11-21', 'Escultura'),
-('Luigi Cherubini', '1760-09-14', '1842-03-15', 'Clasica'),
-('Richard Wagner', '1813-03-22', '1883-02-13', 'Teatro'),
+('Luigi Cherubin', '1760-09-14', '1842-03-15', 'Clasica'),
+('Richard Wagnen', '1813-03-22', '1883-02-13', 'Teatro'),
 ('Paul Hindemith', '1895-11-16', '1963-12-28', 'Jazz'),
 ('Peter Ablinger', '1959-03-15', '1111-11-11', 'Rock & Roll');
 
-insert into ObrasFamosas(Nombre, Creacion, Genero)
-values('Pido la Paz y la Palabra', '1955-01-01', 'Poesia'),
-('Estatua de la Libertad', '1886-01-01', 'Escultura'),
-('El lago de los cisnes', '1875-01-01', 'Clasica'),
-('Romeo y Julieta', '1597-01-01', 'Teatro'),
-('What a Wonderful World', '1967-01-01', 'Jazz'),
-('Ace of Spades', '1980-01-01', 'Rock & Roll');
+insert into ObrasFamosas(Nombre, Creacion, Autores, Genero)
+values('Pido la Paz y la Palabra', '1955-01-01', 'Blas de Otero', 'Poesia'),
+('Estatua de la Libertad', '1886-01-01', 'Frederic Auguste Bartholdi', 'Escultura'),
+('El lago de los cisnes', '1875-01-01', 'Sergei Radchenko', 'Clasica'),
+('Romeo y Julieta', '1597-01-01', 'William Shakespeare', 'Teatro'),
+('What a Wonderful World', '1967-01-01', 'Sam Cooke', 'Jazz'),
+('Ace of Spades', '1980-01-01', 'Eddie Clarke', 'Rock & Roll');
 
 insert into Instrumentos(Nombre, Lugar, Tipo)
 values('Guitarra', 'Espana', 'Cuerda'),

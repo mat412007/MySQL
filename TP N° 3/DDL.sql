@@ -33,7 +33,7 @@ create table Musicos (
 create table ObrasFamosas (
     Nombre varchar(100) not null,
     Creacion date not null,
-    Autores varchar(200),
+    Autores varchar(200) not null,
     Partitura varchar(300),
     Genero varchar(100) not null,
     Primary key(Nombre),
