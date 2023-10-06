@@ -16,4 +16,4 @@
 
 9- 
 
-10- 
+10- select * from generos where Origenes is not null;
