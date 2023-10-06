@@ -1,4 +1,4 @@
-1- select generos.nombre as "Nombre del genero", generos.Caracteristicas as "Caracteristicas", generos.Origenes as "Origenes", generos.Epoca as "Epoca" from generos;
+1- select generos.nombre as "Nombre del genero", generos.Caracteristicas as "Caracteristicas", generos.Origenes as "Origenes", generos.Epoca as "Epoca" from generos; /*Corregir*/
 
 2- select * from obrasfamosas_musicos inner join obrasfamosas on obrasfamosas.nombre = obrasfamosas_musicos.nombre_obrasfamosas; /*Corregir*/
 
@@ -14,6 +14,6 @@
 
 8- select nombre, tipo from instrumentos where materiales = "Madera"; /*Corregir*/
 
-9- 
+9- select epocas.nombre as "Epoca", group_concat(generos.nombre) as "Generos" from epocas inner join Generos on epocas.nombre = generos.epoca group by epocas.nombre; 
 
 10- select * from generos where Origenes is not null;
