@@ -33,7 +33,6 @@ create table Musicos (
 create table ObrasFamosas (
     Nombre varchar(100) not null,
     Creacion date not null,
-    Autores varchar(200) not null,
     Partitura varchar(300),
     Genero varchar(100) not null,
     Primary key(Nombre),
@@ -46,7 +45,7 @@ create table Instrumentos (
     Lugar varchar(70) not null,
     Creador varchar(50),
     Tipo varchar(40) not null,
-    Materiales varchar(300),
+    Materiales varchar(300) not null,
     Primary key(Nombre)
 );
 

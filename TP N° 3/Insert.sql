@@ -11,7 +11,7 @@ values('Poesia', 'Renacimiento'),
 ('Escultura', 'Barroco'),
 ('Clasica', 'Clasicismo'),
 ('Teatro', 'Romanticismo'),
-('Jazz', 'Periodo moderno'),
+('Jazz', 'Periodo contemporaneo'),
 ('Rock & Roll', 'Periodo contemporaneo');
 
 insert into Musicos(Nombre, Nacimiento, Muerte, Genero)
@@ -22,21 +22,21 @@ values('Francisco Guerrero', '1528-10-04', '1599-11-08', 'Poesia'),
 ('Paul Hindemith', '1895-11-16', '1963-12-28', 'Jazz'),
 ('Peter Ablinger', '1959-03-15', '1111-11-11', 'Rock & Roll');
 
-insert into ObrasFamosas(Nombre, Creacion, Autores, Genero)
-values('Pido la Paz y la Palabra', '1955-01-01', 'Blas de Otero', 'Poesia'),
-('Estatua de la Libertad', '1886-01-01', 'Frederic Auguste Bartholdi', 'Escultura'),
-('El lago de los cisnes', '1875-01-01', 'Sergei Radchenko', 'Clasica'),
-('Romeo y Julieta', '1597-01-01', 'William Shakespeare', 'Teatro'),
-('What a Wonderful World', '1967-01-01', 'Sam Cooke', 'Jazz'),
-('Ace of Spades', '1980-01-01', 'Eddie Clarke', 'Rock & Roll');
+insert into ObrasFamosas(Nombre, Creacion, Genero)
+values('Pido la Paz y la Palabra', '1955-01-01', 'Poesia'),
+('Estatua de la Libertad', '1886-01-01', 'Escultura'),
+('El lago de los cisnes', '1875-01-01', 'Clasica'),
+('Romeo y Julieta', '1597-01-01', 'Teatro'),
+('What a Wonderful World', '1967-01-01', 'Jazz'),
+('Ace of Spades', '1980-01-01', 'Rock & Roll');
 
-insert into Instrumentos(Nombre, Lugar, Tipo)
-values('Guitarra', 'Espana', 'Cuerda'),
-('Maza', 'Desconocido', 'Percusion'),
-('Piano', 'Italia', 'Viento'),
-('Violin', 'Italia ', 'Cuerda'),
-('Clarinete', 'Alemania', 'Viento'),
-('Guitarra electrica', 'Estados Unidos', 'Cuerda');
+insert into Instrumentos(Nombre, Lugar, Tipo, Materiales)
+values('Guitarra', 'Espana', 'Cuerda', 'Madera'),
+('Maza', 'Desconocido', 'Percusion', 'Madera y metal'),
+('Piano', 'Italia', 'Viento', 'Variado'),
+('Violin', 'Italia ', 'Cuerda', 'Madera'),
+('Clarinete', 'Alemania', 'Viento', 'Madera'),
+('Guitarra electrica', 'Estados Unidos', 'Cuerda', 'Madera y metal');
 
 insert into Generos_Instrumentos(Nombre_Generos, Nombre_Instrumentos)
 values('Poesia', 'Guitarra'),
@@ -49,7 +49,7 @@ values('Poesia', 'Guitarra'),
 insert into ObrasFamosas_Musicos(Nombre_ObrasFamosas, Nombre_Musicos)
 values('Pido la Paz y la Palabra', 'Francisco Guerrero'),
 ('Estatua de la Libertad', 'Henry Purcell'),
-('El lago de los cisnes', 'Luigi Cherubini'),
-('Romeo y Julieta', 'Richard Wagner'),
+('El lago de los cisnes', 'Luigi Cherubin'),
+('Romeo y Julieta', 'Richard Wagnen'),
 ('What a Wonderful World', 'Paul Hindemith'),
 ('Ace of Spades', 'Peter Ablinger');

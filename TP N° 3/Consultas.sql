@@ -1,6 +1,6 @@
-1- 
+1- select generos.nombre as "Nombre del genero", generos.Caracteristicas as "Caracteristicas", generos.Origenes as "Origenes", generos.Epoca as "Epoca" from generos;
 
-2- select Nombre, Creacion, Autores, Genero from obrasfamosas;
+2- select Nombre, Creacion, Autores, Genero from obrasfamosas; /*Corregir*/
 
 3- select nombre_generos as "Genero", nombre_instrumentos as "Instrumento" from generos_instrumentos;
 
