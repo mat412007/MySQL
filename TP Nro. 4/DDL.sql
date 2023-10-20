@@ -5,8 +5,15 @@ use agencia_de_viajes;
 create table Agencias (
     Codigo varchar(10) NOT NULL,
     Nombre VARCHAR(100) NOT NULL,
-    Ciudad varchar(50) not NULL,
+    Ciudad varchar(50) NOT NULL,
     PRIMARY KEY (Codigo)
+);
+
+create table Clientes (
+    DNI INT(15) NOT NULL,
+    Nombre varchar(100) not null,
+    Domicilio varchar(200) not null,
+    Primary key (DNI)
 );
 
 create table Paquetes_Turisticos (
@@ -14,15 +21,10 @@ create table Paquetes_Turisticos (
     Precio INT(20) NOT NULL,
     Destino varchar(300) NOT NULL,
     Agencia varchar(10) NOT NULL,
+    Cliente INT(15) NOT NULL,
     PRIMARY key (Codigo),
-    Foreign key (Agencia) references Agencias(Codigo)
-);
-
-create table Clientes (
-    DNI INT(15) not null,
-    Nombre varchar(100) not null,
-    Domicilio varchar(200) not null,
-    Primary key (DNI)
+    Foreign key (Agencia) references Agencias(Codigo),
+    Foreign key (Cliente) references Clientes(DNI)
 );
 
 create table Bancos (
@@ -40,12 +42,4 @@ create table Formas_de_Pago (
     Primary key(Tipo),
     Foreign key(Cliente) references Clientes(DNI),
     Foreign key(Banco) references Bancos(Nombre)
-);
-
-create table PaquetesTuristicos_Clientes(
-    Codigo_Paquetes varchar(10) Not NUll,
-    DNI_Clientes INT(15) not null,
-    Primary key(Codigo_Paquetes, DNI_Clientes),
-    Foreign key(Codigo_Paquetes) references Paquetes_Turisticos(Codigo),
-    Foreign key(DNI_Clientes) references Clientes(DNI)
 );
