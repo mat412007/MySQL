@@ -9,11 +9,28 @@ create table Agencias (
     PRIMARY KEY (Codigo)
 );
 
+create table Bancos (
+    Nombre varchar(100) not null,
+    Sucursal varchar(300) not null,
+    Primary key(Nombre)
+);
+
+create table Formas_de_Pago (
+    Tipo varchar(200) not null,
+    Pago INT(20) not null,
+    Fecha date not null,
+    Banco varchar(100) not null,
+    Primary key(Tipo),
+    Foreign key(Banco) references Bancos(Nombre)
+);
+
 create table Clientes (
     DNI INT(15) NOT NULL,
     Nombre varchar(100) not null,
     Domicilio varchar(200) not null,
-    Primary key (DNI)
+    Forma_de_pago varchar(200) not null,
+    Primary key (DNI),
+    Foreign key(Forma_de_pago) references Formas_de_Pago(Tipo)
 );
 
 create table Paquetes_Turisticos (
@@ -27,19 +44,3 @@ create table Paquetes_Turisticos (
     Foreign key (Cliente) references Clientes(DNI)
 );
 
-create table Bancos (
-    Nombre varchar(100) not null,
-    Sucursal varchar(300) not null,
-    Primary key(Nombre)
-);
-
-create table Formas_de_Pago (
-    Tipo varchar(200) not null,
-    Pago INT(20) not null,
-    Fecha date not null,
-    Cliente INT(15) not null,
-    Banco varchar(100) not null,
-    Primary key(Tipo),
-    Foreign key(Cliente) references Clientes(DNI),
-    Foreign key(Banco) references Bancos(Nombre)
-);

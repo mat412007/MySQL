@@ -9,17 +9,6 @@ values('A111111111', 'Agencia 1', 'Vegas'),
 ('A888888888', 'Agencia 8', 'Caribe'),
 ('A999999999', 'Agencia 9', 'Barcelona');
 
-insert into Clientes(DNI, Nombre, Domicilio)
-values('47969111', 'Bruno','Domicilio-1'),
-('47969222', 'Maximo','Domicilio-2'),
-('47969333', 'Pablo','Domicilio-3'),
-('47969444', 'Lorenzo','Domicilio-4'),
-('47969555', 'Felipe','Domicilio-5'),
-('47969666', 'Lucas','Domicilio-6'),
-('47969777', 'Diego','Domicilio-7'),
-('47969888', 'Ezequiel','Domicilio-8'),
-('47969999', 'Ciro','Domicilio-9');
-
 insert into Bancos(Nombre, Sucursal)
 values('Banco 1', 'Banco-9'),
 ('Banco 2', 'Banco-8'),
@@ -31,10 +20,25 @@ values('Banco 1', 'Banco-9'),
 ('Banco 8', 'Banco-2'),
 ('Banco 9', 'Banco-1');
 
+insert into Formas_de_Pago(Tipo, Pago, Fecha, Banco)
+values('Credito' ,10000, '2016', 'Banco 6'),
+('Efectivo' ,5000, '2019', 'Banco 5'),
+('Debito' ,30000, '2013', 'Banco 4');
+
+insert into Clientes(DNI, Nombre, Domicilio, Forma_de_pago)
+values('47969111', 'Bruno','Domicilio-1', 'Efectivo'),
+('47969222', 'Maximo','Domicilio-2', 'Debito'),
+('47969333', 'Pablo','Domicilio-3', 'Credito'),
+('47969444', 'Lorenzo','Domicilio-4', 'Credito'),
+('47969555', 'Felipe','Domicilio-5', 'Debito'),
+('47969666', 'Lucas','Domicilio-6', 'Efectivo'),
+('47969777', 'Diego','Domicilio-7', 'Efectivo'),
+('47969888', 'Ezequiel','Domicilio-8', 'Credito'),
+('47969999', 'Ciro','Domicilio-9', 'Debito');
+
 insert into Paquetes_Turisticos(Codigo, Precio, Destino, Agencia, Cliente)
 values('P111111111', 10000, 'La ciudad', 'A111111111', '47969111'),
 ('PP11111111', 30000, 'La ciudad', 'A111111111', '47969111'),
-('P222222222', 50000, 'El campo', 'A222222222', '47969222'),
 ('P333333333', 100000, 'El bosque', 'A333333333', '47969333'),
 ('P444444444', 200000, 'La selva', 'A444444444', '47969444'),
 ('P555555555', 300000, 'Bajo el puente', 'A555555555', '47969555'),
@@ -42,16 +46,4 @@ values('P111111111', 10000, 'La ciudad', 'A111111111', '47969111'),
 ('PP66666666', 450000, 'Pasando la via', 'A666666666', '47969666'),
 ('P777777777', 500000, 'La otra avenida', 'A777777777', '47969777'),
 ('P888888888', 600000, 'Alaska', 'A888888888', '47969888'),
-('PP88888888', 650000, 'Alaska', 'A888888888', '47969888'),
-('P999999999', 700000, 'El desierto', 'A999999999', '47969999');
-
-insert into Formas_de_Pago(Tipo, Pago, Fecha, Cliente, Banco)
-values('Credito' , 10000, '2016', '47969777', 'Banco 6'),
-('Efectivo', 5000, '2019', '47969888', 'Banco 5'),
-('Debito'  , 30000, '2013', '47969999', 'Banco 4'),
-('Efectivo', 1000000, '2020', '47969444', 'Banco 9'),
-('Debito'  , 600000, '2022', '47969555', 'Banco 8'),
-('Credito' , 4000000, '2021', '47969666', 'Banco 7'),
-('Credito' , 8000, '2024', '47969111', 'Banco 3'),
-('Efectivo', 900000, '2019', '47969222', 'Banco 2'),
-('Debito'  , 20000, '2016', '47969333', 'Banco 1');
+('PP88888888', 650000, 'Alaska', 'A888888888', '47969888');
