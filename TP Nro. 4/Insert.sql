@@ -21,9 +21,9 @@ values('Banco 1', 'Banco-9'),
 ('Banco 9', 'Banco-1');
 
 insert into Formas_de_Pago(Tipo, Pago, Fecha, Banco)
-values('Credito' ,10000, '2016', 'Banco 6'),
-('Efectivo' ,5000, '2019', 'Banco 5'),
-('Debito' ,30000, '2013', 'Banco 4');
+values('Credito' ,10000, '2016-01-01', 'Banco 6'),
+('Efectivo' ,5000, '2019-01-01', 'Banco 5'),
+('Debito' ,30000, '2013-01-01', 'Banco 4');
 
 insert into Clientes(DNI, Nombre, Domicilio, Forma_de_pago)
 values('47969111', 'Bruno','Domicilio-1', 'Efectivo'),
