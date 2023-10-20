@@ -5,9 +5,9 @@ select paquetes_turisticos.codigo, paquetes_turisticos.destino, paquetes_turisti
 select clientes.DNI, clientes.nombre, clientes.domicilio from clientes, paquetes_turisticos where clientes.DNI = paquetes_turisticos.cliente;
 
 3-
-select Formas_de_Pago.banco, clientes.nombre from Formas_de_Pago, clientes where clientes.Forma_de_pago = Formas_de_Pago.Tipo order by formas_de_pago.banco;
 
 4-
+select Formas_de_Pago.banco, clientes.nombre from Formas_de_Pago, clientes where clientes.Forma_de_pago = Formas_de_Pago.Tipo order by formas_de_pago.banco;
 
 5- 
 select clientes.nombre from clientes where nombre like 'P%';
