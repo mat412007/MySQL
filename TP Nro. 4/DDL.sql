@@ -3,17 +3,17 @@ create database agencia_de_viajes;
 use agencia_de_viajes;
 
 create table Agencias (
-    Codigo INT(10) NOT NULL,
+    Codigo varchar(10) NOT NULL,
     Nombre VARCHAR(100) NOT NULL,
     Ciudad varchar(50) not NULL,
     PRIMARY KEY (Codigo)
 );
 
 create table Paquetes_Turisticos (
-    Codigo INT(10) Not NULL,
+    Codigo varchar(10) Not NULL,
     Precio INT(20) NOT NULL,
     Destino varchar(300) NOT NULL,
-    Agencia INT(10) NOT NULL,
+    Agencia varchar(10) NOT NULL,
     PRIMARY key (Codigo),
     Foreign key (Agencia) references Agencias(Codigo)
 );
@@ -43,7 +43,7 @@ create table Formas_de_Pago (
 );
 
 create table PaquetesTuristicos_Clientes(
-    Codigo_Paquetes INT(10) Not NUll,
+    Codigo_Paquetes varchar(10) Not NUll,
     DNI_Clientes INT(15) not null,
     Primary key(Codigo_Paquetes, DNI_Clientes),
     Foreign key(Codigo_Paquetes) references Paquetes_Turisticos(Codigo),
