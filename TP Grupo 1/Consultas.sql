@@ -10,4 +10,6 @@ select nombre, apellido1, apellido2, puesto from empleado where puesto != 'Repre
 
 select nombre from empleado inner join oficina on empleado.codigo_oficina = oficina.codigo_oficina where pais like 'Espa%';
 
+select distinct estado from pedido;
 
+select cliente.codigo_cliente from cliente inner join pago on cliente.codigo_cliente = pago.codigo_cliente where year(pago.fecha_pago) = 2008;
