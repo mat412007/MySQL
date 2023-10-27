@@ -3,7 +3,7 @@ create database ferreteria;
 use ferreteria;
 
 create table Piezas(
-    Codigo int identity not null,
+    Codigo int(4) not null,
     Nombre nvarchar(100) not null,
     Primary key(Codigo)
 );
@@ -15,7 +15,7 @@ create table Proveedores(
 );
 
 create table Suministra(
-    CodigoPieza int not null,
+    CodigoPieza int(4) not null,
     IdProveedor char(4) not null,
     Precio int(10) not null,
     Primary key(CodigoPieza, IdProveedor),
