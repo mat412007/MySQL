@@ -13,7 +13,7 @@ values(1254, 'Madera'),
 insert into Proveedores(ID, Nombre)
 values('HAL', 'Juan'),
 ('4685', 'Raul'),
-('4268', 'Maximo'),
+('RBT', 'Maximo'),
 ('9752', 'Andres'),
 ('1826', 'Leon'),
 ('2486', 'Tomas'),
@@ -25,14 +25,11 @@ values('HAL', 'Juan'),
 insert into Suministra(CodigoPieza, IdProveedor, Precio)
 values(1254, 'HAL', 500),
 (6532, '4685', 600),
-(1478, '4268', 1500),
-(1, '9752', 50),
+(1478, 'RBT', 1500),
+(1, 'RBT', 50),
 (9685, '1826', 300),
 (5483, '2486', 400),
 (1286, 'TNBC', 800),
 (4685, '6428', 700),
 (3542, '3167', 200),
 (7542, '7946', 100);
-
-insert into Suministra(CodigoPieza, IdProveedor, Precio)
-values(11, 'TNBC', 10);
