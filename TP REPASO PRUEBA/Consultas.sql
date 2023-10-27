@@ -15,3 +15,7 @@ select Piezas.Nombre, Suministra.Precio from Piezas, Suministra where Piezas.Cod
 
 
 update Suministra set Precio = Precio + 100;
+
+
+
+delete from Suministra where CodigoPieza in (select Codigo from Piezas where Nombre = "Clavos");

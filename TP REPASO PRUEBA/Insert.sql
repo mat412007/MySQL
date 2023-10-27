@@ -17,7 +17,7 @@ values('HAL', 'Juan'),
 ('9752', 'Andres'),
 ('1826', 'Leon'),
 ('2486', 'Tomas'),
-('7642', 'Federico'),
+('TNBC', 'Federico'),
 ('6428', 'Felipe'),
 ('3167', 'Ciro'),
 ('7946', 'Alejandro');
@@ -29,7 +29,10 @@ values(1254, 'HAL', 500),
 (1, '9752', 50),
 (9685, '1826', 300),
 (5483, '2486', 400),
-(1286, '7642', 800),
+(1286, 'TNBC', 800),
 (4685, '6428', 700),
 (3542, '3167', 200),
 (7542, '7946', 100);
+
+insert into Suministra(CodigoPieza, IdProveedor, Precio)
+values(11, 'TNBC', 10);
