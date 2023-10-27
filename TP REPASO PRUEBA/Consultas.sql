@@ -10,6 +10,7 @@ e- select Nombre from Proveedores where Proveedores.ID in (select IdProveedor fr
    select Nombre from Proveedores inner join Suministra on Proveedores.ID = Suministra.IdProveedor where CodigoPieza = 1;
 
 f- select Nombre from Piezas where Piezas.Codigo in (select CodigoPieza from Suministra where IdProveedor = 'HAL');
+   select Nombre from Piezas inner join Suministra 
 
 g- select Piezas.Nombre, Suministra.Precio from Piezas, Suministra where Piezas.Codigo = Suministra.CodigoPieza and Suministra.Precio in (select max(Precio) from Suministra);
 
