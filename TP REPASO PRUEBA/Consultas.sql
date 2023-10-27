@@ -7,6 +7,7 @@ c- select avg(Precio) as "Precio medio" from Suministra;
 d- select Nombre as "Piezas que terminan con 's'" from Piezas where Nombre like "%s";
 
 e- select Nombre from Proveedores where Proveedores.ID in (select IdProveedor from Suministra where CodigoPieza = 1);
+   select Nombre from Proveedores inner join Suministra on Proveedores.ID = Suministra.IdProveedor where CodigoPieza = 1;
 
 f- select Nombre from Piezas where Piezas.Codigo in (select CodigoPieza from Suministra where IdProveedor = 'HAL');
 
