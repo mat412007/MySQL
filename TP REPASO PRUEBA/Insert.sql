@@ -8,7 +8,8 @@ values(1254, 'Madera'),
 (1286, 'Hacha'),
 (4685, 'Pico'),
 (3542, 'Pinza'),
-(7542, 'Tornillos');
+(7542, 'Tornillos'),
+(11, 'Tuercas');
 
 insert into Proveedores(ID, Nombre)
 values('HAL', 'Juan'),
@@ -33,3 +34,5 @@ values(1254, 'HAL', 500),
 (4685, '6428', 700),
 (3542, '3167', 200),
 (7542, '7946', 100);
+
+

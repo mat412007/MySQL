@@ -12,7 +12,8 @@ select Nombre from Piezas where Piezas.Codigo in (select CodigoPieza from Sumini
 
 select Piezas.Nombre, Suministra.Precio from Piezas, Suministra where Piezas.Codigo = Suministra.CodigoPieza and Suministra.Precio in (select max(Precio) from Suministra);
 
-
+insert into Suministra(CodigoPieza, IdProveedor, Precio)
+values(11, 'TNBC', 10);
 
 update Suministra set Precio = Precio + 100;
 
