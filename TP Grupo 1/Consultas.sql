@@ -8,3 +8,6 @@ select puesto, nombre, apellido1, apellido2, email from empleado where codigo_je
 
 select nombre, apellido1, apellido2, puesto from empleado where puesto != 'Representante Ventas';
 
+select nombre from empleado inner join oficina on empleado.codigo_oficina = oficina.codigo_oficina where pais like 'Espa%';
+
+
