@@ -24,4 +24,4 @@ select * from pedido where month(fecha_entrega) = 01 and estado = 'Entregado';
 
 select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal';
 
-select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal';
+select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal' order by fecha_pago desc;
