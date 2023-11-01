@@ -22,8 +22,6 @@ select * from pedido where estado = 'Rechazado' and year(fecha_entrega) = 2009;
 
 select * from pedido where month(fecha_entrega) = 01 and estado = 'Entregado';
 
-select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal';
-
 select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal' order by fecha_pago desc;
 
 select distinct forma_pago from pago;
@@ -37,3 +35,5 @@ select nombre_cliente, nombre, apellido1, apellido2 from cliente, empleado where
 select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado, empleado.nombre, empleado.apellido1,empleado.apellido2 from cliente, pedido, empleado where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado = 'Entregado' and cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado order by codigo_pedido;
 
 select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado, empleado.nombre, empleado.apellido1,empleado.apellido2 from cliente, pedido, empleado where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado != 'Entregado' and cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado order by codigo_pedido;
+
+select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado, empleado.nombre, empleado.apellido1,empleado.apellido2 from cliente, pedido, empleado where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado = 'Entregado' and cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado order by codigo_pedido;
