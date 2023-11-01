@@ -25,3 +25,11 @@ select * from pedido where month(fecha_entrega) = 01 and estado = 'Entregado';
 select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal';
 
 select * from pago where year(fecha_pago) = 2008 and forma_pago = 'Paypal' order by fecha_pago desc;
+
+select distinct forma_pago from pago;
+
+select gama, cantidad_en_stock, precio_venta from producto where gama = 'Ornamentales' and cantidad_en_stock > 100 order by precio_venta desc;
+
+select codigo_empleado_rep_ventas from cliente where ciudad = 'Madrid' and codigo_empleado_rep_ventas between 11 and 30;
+
+select nombre_cliente, nombre, apellido1, apellido2 from cliente, empleado where cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado;
