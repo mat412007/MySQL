@@ -34,4 +34,6 @@ select codigo_empleado_rep_ventas from cliente where ciudad = 'Madrid' and codig
 
 select nombre_cliente, nombre, apellido1, apellido2 from cliente, empleado where cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado;
 
-select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado from cliente, pedido where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado = 'Entregado' order by codigo_pedido;
+select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado, empleado.nombre, empleado.apellido1,empleado.apellido2 from cliente, pedido, empleado where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado = 'Entregado' and cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado order by codigo_pedido;
+
+select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado, empleado.nombre, empleado.apellido1,empleado.apellido2 from cliente, pedido, empleado where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado != 'Entregado' and cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado order by codigo_pedido;
