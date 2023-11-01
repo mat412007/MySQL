@@ -33,3 +33,5 @@ select gama, cantidad_en_stock, precio_venta from producto where gama = 'Ornamen
 select codigo_empleado_rep_ventas from cliente where ciudad = 'Madrid' and codigo_empleado_rep_ventas between 11 and 30;
 
 select nombre_cliente, nombre, apellido1, apellido2 from cliente, empleado where cliente.codigo_empleado_rep_ventas = empleado.codigo_empleado;
+
+select pedido.codigo_pedido ,cliente.nombre_cliente, pedido.estado from cliente, pedido where cliente.codigo_cliente = pedido.codigo_cliente and pedido.estado = 'Entregado' order by codigo_pedido;
