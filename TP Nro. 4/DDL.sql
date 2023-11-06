@@ -3,44 +3,43 @@ create database agencia_de_viajes;
 use agencia_de_viajes;
 
 create table Agencias (
-    Codigo varchar(10) NOT NULL,
-    Nombre VARCHAR(100) NOT NULL,
-    Ciudad varchar(50) NOT NULL,
-    PRIMARY KEY (Codigo)
+Codigo int(5) not null,
+Fecha_Inicial date,
+Ciudad varchar(100) not null,
+Primary key(Codigo)
 );
 
-create table Bancos (
-    Nombre varchar(100) not null,
-    Sucursal varchar(300) not null,
-    Primary key(Nombre)
+create table Clientes(
+DNI int(8) not null,
+Domicilio nvarchar(70) not null,
+Nombre varchar(100) not null,
+Apellido varchar(100) not null,
+Primary key(DNI)
 );
 
-create table Formas_de_Pago (
-    Tipo varchar(200) not null,
-    Pago INT(20) not null,
-    Fecha date not null,
-    Banco varchar(100) not null,
-    Primary key(Tipo),
-    Foreign key(Banco) references Bancos(Nombre)
+create table Paquetes(
+Codigo int(5) not null,
+Destino varchar(100) not null,
+Precio int(10) not null,
+Agencia int(5) not null,
+Primary key(Codigo),
+Foreign key (Agencia) references Agencias(Codigo)
 );
 
-create table Clientes (
-    DNI INT(15) NOT NULL,
-    Nombre varchar(100) not null,
-    Domicilio varchar(200) not null,
-    Forma_de_pago varchar(200) not null,
-    Primary key (DNI),
-    Foreign key(Forma_de_pago) references Formas_de_Pago(Tipo)
+create table Paquetes_Clientes(
+Codigo_Paquete int(5) not null,
+DNI_Cliente int(8) not null,
+Primary key (Codigo_Paquete, DNI_Cliente),
+Foreign key (Codigo_Paquete) references Paquetes(Codigo),
+Foreign key (DNI_Cliente) references Clientes(DNI)
 );
 
-create table Paquetes_Turisticos (
-    Codigo varchar(10) Not NULL,
-    Precio INT(20) NOT NULL,
-    Destino varchar(300) NOT NULL,
-    Agencia varchar(10) NOT NULL,
-    Cliente INT(15) NOT NULL,
-    PRIMARY key (Codigo),
-    Foreign key (Agencia) references Agencias(Codigo),
-    Foreign key (Cliente) references Clientes(DNI)
+create table Formas_Pago(
+Tipo varchar(55) not null,
+Monto int(10) not null,
+Fecha_Validez date,
+Cliente_DNI int(8) not null,
+PRIMARY KEY (Tipo),  
+FOREIGN key (Cliente_DNI) REFERENCES Clientes(DNI)
 );
 
