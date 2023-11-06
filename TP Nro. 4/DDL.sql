@@ -42,4 +42,3 @@ Cliente_DNI int(8) not null,
 PRIMARY KEY (Tipo),  
 FOREIGN key (Cliente_DNI) REFERENCES Clientes(DNI)
 );
-

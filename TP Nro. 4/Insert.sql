@@ -19,3 +19,24 @@ values(47589631, 'Nogoya 2343', 'Juan', 'Lopez'),
 (24683157, 'Santo Tome 3758', 'Bauti', 'Mambrin'),
 (31648289, 'Argerich 3850', 'Marco', 'Sanzchez');
 
+insert into Paquetes(Codigo, Destino, Precio, Agencia)
+values(4682, 'Londres', 400000, 77777),
+(1348, 'Barcelona', 900000, 66666),
+(4762, 'Washington', 30000, 33333),
+(3486, 'CABA', 600000, 44444),
+(8246, 'Tokyo', 500000, 99999),
+(7987, 'Paris', 700000, 55555),
+(6482, 'Nueva York', 450000, 88888),
+(1642, 'Roma', 800000, 11111),
+(3152, 'Real Madrid', 250000, 22222),
+(9762, 'Madrid', 650000, 99999);
+
+insert into Paquetes_Clientes(Codigo_Paquete, DNI_Cliente)
+values(6482, 31648289),
+(9762, 47589631),
+(1642, 46214695),
+(1348, 16794652),
+(4762, 24683157),
+(4682, 12463589),
+(8246, 16478532),
+(3486, 34899665);
