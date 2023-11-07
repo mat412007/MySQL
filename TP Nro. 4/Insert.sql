@@ -40,3 +40,16 @@ values(6482, 31648289),
 (4682, 12463589),
 (8246, 16478532),
 (3486, 34899665);
+
+insert into Formas_Pago(Tipo, Monto, Banco, Fecha_Validez, Cliente_DNI)
+values('Tarjeta', 500000, 'Buenos Aires', '2020-12-30', '88888'),
+('Efectivo', 250000, 'Citibank', '2023-10-05', '22222'),
+('Efectivo', 400000, 'Supervielle', '2010-09-02', '33333'),
+('Tarjeta', 300000, 'Patagonia', '2018-11-22', '44444'),
+('Tarjeta', 600000, 'Hipotecado', '2015-04-15', '55555'),
+('Efectivo', 200000, 'Municipal', '2021-07-08', '66666'),
+('Tarjeta', 550000, 'Santander', '2020-04-28', '77777'),
+('Efectivo', 100000, 'Corrientes', '2022-09-13', '88888'),
+('Efectivo', 300000, 'Brubank', '2012-02-28', '99999'),
+('Tarjeta', 400000, 'Bibank', '2023-12-01', '11111'),
+('Efectivo', 600000, 'Mariva', '2019-05-23', '99999');

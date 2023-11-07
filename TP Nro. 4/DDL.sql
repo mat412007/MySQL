@@ -37,7 +37,8 @@ Foreign key (DNI_Cliente) references Clientes(DNI)
 create table Formas_Pago(
 Tipo varchar(55) not null,
 Monto int(10) not null,
-Fecha_Validez date,
+Banco varchar(55) not null,
+Fecha_Validez date not null,
 Cliente_DNI int(8) not null,
 PRIMARY KEY (Tipo),  
 FOREIGN key (Cliente_DNI) REFERENCES Clientes(DNI)
