@@ -17,7 +17,7 @@ select clientes.nombre from clientes where nombre like 'P%';
 select codigo, precio from paquetes where precio > 400000 order by precio;
 
 7- 
-update Paquetes set Precio = (Precio * 0.9) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
+update Paquetes set Paquetes.Precio = (Precio * 0.9) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
 
 8- 
 update Paquetes set Precio = (Precio * 1.3) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
