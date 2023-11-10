@@ -20,8 +20,10 @@ select codigo, precio from paquetes where precio > 400000 order by precio;
 update Paquetes set Precio = (Precio * 0.9) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
 
 8- 
+update Paquetes set Precio = (Precio * 1.3) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
 
 9-
+select Fecha_Validez, banco, tipo from Formas_Pago;
 
 10- 
 select * from agencias where ciudad = 'CABA';
