@@ -5,6 +5,7 @@ select destino, codigo, precio, agencia from paquetes;
 select dni, nombre, Apellido from clientes, Paquetes_Clientes, paquetes where clientes.DNI = Paquetes_Clientes.DNI_Cliente and paquetes.Codigo = Paquetes_Clientes.Codigo_Paquete;
 
 3-
+select nombre, monto, tipo from clientes, Formas_Pago where clientes.DNI in(select DNI_Cliente from Paquetes_Clientes) and Formas_Pago.Cliente_DNI = clientes.DNI;
 
 4-
 select banco,Cliente_DNI from Formas_Pago, clientes where clientes.DNI = Formas_Pago.Cliente_DNI;
