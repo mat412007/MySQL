@@ -17,13 +17,13 @@ select nombre as "Nombre del cliente" from clientes where nombre like 'P%';
 select codigo as "Codigo de paquete", precio as "Precio" from paquetes where precio > 400000 order by precio;
 
 7- 
-update Paquetes set Paquetes.Precio = (Precio * 0.9) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
+update Paquetes, Paquetes_Clientes, Formas_Pago set Paquetes.Precio = (Precio * 0.9) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes) and Paquetes_Clientes.DNI_Cliente = Formas_Pago.Cliente_DNI and Formas_Pago.tipo = 'Efectivo';
 
 8- 
-update Paquetes set Paquetes.Precio = (Precio * 1.3) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes);
+update Paquetes, Paquetes_Clientes, Formas_Pago set Paquetes.Precio = (Precio * 1.3) where paquetes.codigo in(select Codigo_Paquete from Paquetes_Clientes) and Paquetes_Clientes.DNI_Cliente = Formas_Pago.Cliente_DNI and Formas_Pago.tipo = 'Tarjeta';
 
 9-
-select Fecha_Validez, banco, tipo from Formas_Pago;
+select Fecha_Validez as "Fecha de validez", banco as "Banco", tipo as "Forma de pago" from Formas_Pago;
 
 10- 
 select * from agencias where ciudad = 'CABA';
